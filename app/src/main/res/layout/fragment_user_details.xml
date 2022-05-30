@@ -125,6 +125,16 @@
                 app:layout_constraintRight_toRightOf="parent"
                 tools:text="233" />
 
+            <Space
+                android:id="@+id/follower_bottom"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_following" />
+
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/user_company"
                 android:layout_width="wrap_content"
@@ -135,7 +145,7 @@
                 android:visibility="@{viewModel.githubUser.company == null ? View.GONE : View.VISIBLE}"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/user_following"
+                app:layout_constraintTop_toBottomOf="@id/follower_bottom"
                 tools:text="company" />
 
             <androidx.appcompat.widget.AppCompatTextView

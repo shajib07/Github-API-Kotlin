@@ -64,7 +64,7 @@ class UserListFragment : Fragment() {
     }
 
     fun openUserDetailsFragment(login: String) {
-        (activity as LoginActivity).openUserDetailsFragment(login)
+        (activity as HomeActivity).openUserDetailsFragment(login)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

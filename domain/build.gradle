@@ -32,6 +32,7 @@ android {
 
 dependencies {
     implementation project(':entities')
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2"
 
 
     implementation 'androidx.core:core-ktx:1.7.0'

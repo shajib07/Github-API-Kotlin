@@ -3,7 +3,6 @@ package com.atahar.githubapi.presentation
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
@@ -20,7 +19,7 @@ import com.google.firebase.auth.OAuthProvider
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LoginActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var sharedPref: SharedPreferences
@@ -29,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        title = getString(R.string.title_home_activity)
         initialize()
     }
 
@@ -50,11 +50,13 @@ class LoginActivity : AppCompatActivity() {
             .startActivityForSignInWithProvider(this, provider.build())
             .addOnSuccessListener {
 
+/*
                 Toast.makeText(
                     this,
                     "Welcome ${auth.currentUser!!.displayName}",
                     Toast.LENGTH_SHORT
                 ).show()
+*/
 
                 sharedPref.edit()
                     .putString(ACCESS_TOKEN, (it.credential as OAuthCredential).accessToken)
