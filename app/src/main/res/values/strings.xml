@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Github API Kotlin</string>
+
+
+    <string name="error_no_data">No Data Found. Please try again!</string>
+
+</resources>
