@@ -3,7 +3,7 @@
 An Android mobile app that uses Github API. This app the users of Github in a list view and tap on a user will open the user details.
 
 
-# Main Features
+## Main Features
 
 - Kotlin
 - Clean Architecture
@@ -17,7 +17,7 @@ An Android mobile app that uses Github API. This app the users of Github in a li
 
 
 
-To run the project you need to get the configuration file (google-services.json) from the developer's site and paste it in the app level directory of your project.
+###### To run the project you need to get the configuration file (**google-services.json**) from the developer's site and paste it in the app level directory of your project.
 follow the steps -
 
 - Goto https://console.firebase.google.com/
