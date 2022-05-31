@@ -1,10 +1,6 @@
 package com.atahar.githubapi
 
 import android.app.Application
-import com.atahar.data.repositories.UserRepoImpl
-import com.atahar.domain.usecases.GetUserDetails
-import com.atahar.domain.usecases.GetUserList
-import com.atahar.githubapi.di.ServiceLocator
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp

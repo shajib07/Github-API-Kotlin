@@ -1,6 +1,5 @@
 package com.atahar.githubapi.di
 
-import com.atahar.data.api.RetrofitClient
 import com.atahar.data.api.UserDetailsApi
 import com.atahar.data.api.UserListApi
 import com.atahar.githubapi.utils.AppConfig.GITHUB_API_BASE_URL
@@ -35,11 +34,13 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideUserListApi() = provideRetrofit().create(UserListApi::class.java)
+    fun provideUserListApi(): UserListApi =
+        provideRetrofit().create(UserListApi::class.java)
 
     @Singleton
     @Provides
-    fun provideUserDetailsApi() = provideRetrofit().create(UserDetailsApi::class.java)
+    fun provideUserDetailsApi(): UserDetailsApi =
+        provideRetrofit().create(UserDetailsApi::class.java)
 
 
 }
